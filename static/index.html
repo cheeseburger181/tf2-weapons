@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang = "ru">
+
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <title>TF2 weapons</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link rel = "icon" href = "img/icon.png">
+    <script src = "script.js"></script>
+</head>
+
+<body onclick = "datalist_disappear(event)">
+    <div class = "test">
+        <div class = "test_person">
+            <p class = "test_name">Matvey</p>
+            <p class = "test_id">76561197971834323</p>
+        </div>
+        <div class = "test_person">
+            <p class = "test_name">Fedor</p>
+            <p class = "test_id">76561198944522218</p>
+        </div>
+    </div>
+
+    <section class = "mainside">
+        <div class = "mainside_content">
+
+            <!-- filter panel -->
+
+            <div class = "mainside_content_filters">
+
+                <!-- filtering by slot -->
+
+                <button class = "mainside_content_filters_buttons">
+                    <span>Slot</span>
+
+                    <ul class = "mainside_content_filters_buttons_list mainside_content_filters_buttons_list_upper" onmouseenter = "appear(0)" onmouseleave = "disappear(0)">
+
+                        <!-- filtering by primary slot -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'slot', 'primary')">
+                            <img src = "img/check_1.png">
+                            <span>primary</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by secondary slot -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'slot', 'secondary')">
+                            <img src = "img/check_1.png">
+                            <span>secondary</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by melee slot -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'slot', 'melee')">
+                            <img src = "img/check_1.png">
+                            <span>melee</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by pda slot -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'slot', 'pda2')">
+                            <img src = "img/check_1.png">
+                            <span>pda</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by building slot -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'slot', 'building')">
+                            <img src = "img/check_1.png">
+                            <span>building</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+                    </ul>
+                </button>
+
+                <!-- filtering by quality -->
+
+                <button class = "mainside_content_filters_buttons">
+                    <span>Quality</span>
+
+                    <ul class = "mainside_content_filters_buttons_list mainside_content_filters_buttons_list_upper" onmouseenter = "appear(1)" onmouseleave = "disappear(1)">
+
+                        <!-- filtering by unique quality -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'quality', 'Unique')">
+                            <img src = "img/check_1.png">
+                            <span>unique</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by vintage quality -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'quality', 'vintage')">
+                            <img src = "img/check_1.png">
+                            <span>vintage</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by genuine quality -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'quality', 'rarity1')">
+                            <img src = "img/check_1.png">
+                            <span>genuine</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+                        
+                        <!-- filtering by strange quality -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'quality', 'strange')">
+                            <img src = "img/check_1.png">
+                            <span>strange</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by unusual quality -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'quality', 'rarity4')">
+                            <img src = "img/check_1.png">
+                            <span>unusual</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by haunted quality -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'quality', 'haunted')">
+                            <img src = "img/check_1.png">
+                            <span>haunted</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by collector's quality -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'quality', 'collectors')">
+                            <img src = "img/check_1.png">
+                            <span>collector's</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by decorated quality -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'quality', 'paintkitweapon')">
+                            <img src = "img/check_1.png">
+                            <span>decorated</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+                    </ul>
+                </button>
+
+                <!-- filtering by class -->
+
+                <button class = "mainside_content_filters_buttons">
+                    <span>Class</span>
+
+                    <ul class = "mainside_content_filters_buttons_list mainside_content_filters_buttons_list_upper" onmouseenter = "appear(2)" onmouseleave = "disappear(2)">
+
+                        <!-- filtering by class "Scout" -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'class', 'Scout')">
+                            <img src = "img/check_1.png">
+                            <span>scout</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by class "Soldier" -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'class', 'Soldier')">
+                            <img src = "img/check_1.png">
+                            <span>soldier</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by class "Pyro" -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'class', 'Pyro')">
+                            <img src = "img/check_1.png">
+                            <span>pyro</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by class "Demoman" -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'class', 'Demoman')">
+                            <img src = "img/check_1.png">
+                            <span>demoman</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by class "Heavy" -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'class', 'Heavy')">
+                            <img src = "img/check_1.png">
+                            <span>heavy</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by class "Engineer" -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'class', 'Engineer')">
+                            <img src = "img/check_1.png">
+                            <span>engineer</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by class "Medic" -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'class', 'Medic')">
+                            <img src = "img/check_1.png">
+                            <span>medic</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by class "Sniper" -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'class', 'Sniper')">
+                            <img src = "img/check_1.png">
+                            <span>sniper</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by class "Spy" -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'class', 'Spy')">
+                            <img src = "img/check_1.png">
+                            <span>spy</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+                    </ul>
+                </button>
+
+                <!-- filtering by tradability -->
+
+                <button class = "mainside_content_filters_buttons">
+                    <span>Tradable</span>
+
+                    <ul class = "mainside_content_filters_buttons_list" onmouseenter = "appear(3)" onmouseleave = "disappear(3)">
+
+                        <!-- filtering by tradable items -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'tradability', 'tradable')">
+                            <img src = "img/check_1.png">
+                            <span>tradable</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by untradable items -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'tradability', 'untrade')">
+                            <img src = "img/check_1.png">
+                            <span>untradable</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+                    </ul>
+                </button>
+
+                <!-- filtering by craftability -->
+
+                <button class = "mainside_content_filters_buttons">
+                    <span>Craftable</span>
+
+                    <ul class = "mainside_content_filters_buttons_list" onmouseenter = "appear(4)" onmouseleave = "disappear(4)">
+
+                        <!-- filtering by craftable items-->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'craftability', 'craftable')">
+                            <img src = "img/check_1.png">
+                            <span>craftable</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by uncraftable items-->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'craftability', 'uncraft')">
+                            <img src = "img/check_1.png">
+                            <span>uncraftable</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+                    </ul>
+                </button>
+
+                <!-- filtering by killstreak -->
+
+                <button class = "mainside_content_filters_buttons">
+                    <span>Killstreak</span>
+
+                    <ul class = "mainside_content_filters_buttons_list" onmouseenter = "appear(5)" onmouseleave = "disappear(5)">
+
+                        <!-- filtering by none killstreak items -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'killstreak', 'none')">
+                            <img src = "img/check_1.png">
+                            <span>none</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by basic killstreak items -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'killstreak', 'killstreak')">
+                            <img src = "img/check_1.png">
+                            <span>killstreak</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by specialized killstreak items -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'killstreak', 'specialized')">
+                            <img src = "img/check_1.png">
+                            <span>specialized</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+
+                        <!-- filtering by professional killstreak items -->
+
+                        <li class = "mainside_content_filters_buttons_list_item" onclick = "check_box(this, 'killstreak', 'professional')">
+                            <img src = "img/check_1.png">
+                            <span>professional</span>
+                            <span class = "mainside_content_filters_buttons_list_item_count">0</span>
+                        </li>
+                    </ul>
+                </button>
+            </div>
+
+            <!-- search bar panel -->
+
+            <div class = "mainside_content_search">
+                <form class = "mainside_content_search_bar">
+                    <img class = "mainside_content_search_bar_image" src = "img/lupa.png">
+                    <input class = "mainside_content_search_bar_input" type = "text" placeholder = "search item by name" spellcheck = "false">
+                </form>
+                <button class = "mainside_content_search_select mainside_content_search_select_unselectall" onclick = "unselect_all()">
+                    <span>all</span>
+                    <img src = "img/check_0.png">
+                </button>
+                <button class = "mainside_content_search_select mainside_content_search_select_selectall" onclick = "select_all()">
+                    <span>all</span>
+                    <img src = "img/check_1.png">
+                </button>
+            </div>
+
+            <!-- items panel -->
+
+            <div class = "mainside_content_items">
+                <div class = "mainside_content_items_area"></div>
+                
+            </div>
+
+            <div class="mainside_content_errors">
+                <div class="mainside_content_errors_error mainside_content_errors_error_1">
+                    <img src="img/error.png">
+                    <p class="mainside_content_errors_error_message">
+                        ERROR! User with the specified SteamID was not found!
+                    </p>
+                </div>
+                <div class="mainside_content_errors_error mainside_content_errors_error_2">
+                    <img src="img/warning.png">
+                    <p class="mainside_content_errors_error_message">
+                        WARNING! User's inventory is empty!
+                    </p>
+                </div>
+                <div class="mainside_content_errors_error mainside_content_errors_error_3">
+                    <img src="img/error.png">
+                    <p class="mainside_content_errors_error_message">
+                        ERROR! User's account is private!
+                    </p>
+                </div>
+                <div class="mainside_content_errors_error mainside_content_errors_error_4">
+                    <img src="img/error.png">
+                    <p class="mainside_content_errors_error_message">
+                        ERROR! Too many requests!
+                    </p>
+                </div>
+                <div class="mainside_content_errors_error mainside_content_errors_error_5" onclick="error(0)">
+                    <img src="img/error.png">
+                    <p class="mainside_content_errors_error_message">
+                        ERROR! Failed to update inventory!
+                    </p>
+                </div>
+            </div>
+
+            <!-- items total count -->
+
+            <div class = "mainside_content_count">
+                <span>0</span><span>/</span><span>0</span>
+            </div>
+        </div>
+
+        <!-- file update panel -->
+        <div class = "mainside_functions">
+            <input class = "mainside_functions_input" type = "number" placeholder = "enter SteamID" onfocus = "datalist_appear()" oninput = "datalist_select(this)">
+            <ul class = "mainside_functions_datalist"></ul>
+            <button class = "mainside_functions_button" onclick = "refresh()">Update file</button>
+        </div>
+        
+    </section>
+
+    <!-- descriptions -->
+    
+    <section class = "descriptions">
+
+        <!-- description original -->
+
+        <div class = "descriptions_description" id = "description">
+            <div class = "descriptions_description_name">
+                <span>Name</span>
+            </div>
+            <div class = "descriptions_description_class">
+                <span>Class:</span>
+                <div class = "descriptions_description_class_images"></div>
+            </div>
+            <div class = "descriptions_description_slot">
+                <span>Slot:</span><span></span>
+            </div>
+            <div class = "descriptions_description_killstreak">
+                <span></span><span>active</span>
+            </div>
+            <div class = "descriptions_description_tradable">
+                <span>(untradable)</span>
+            </div>
+            <div class = "descriptions_description_craftable">
+                <span>(uncraftable)</span>
+            </div>
+        </div>
+        
+        <!-- created descriptions -->
+
+    </section>
+
+    <!-- main script -->
+
+    <script>fetch_steamapi(); fetch_storage()</script>
+</body>
+
+</html>
